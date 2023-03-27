@@ -2,8 +2,11 @@ import {useEffect, useState} from 'react'
 import Navbar from '@/scenes/navbar'
 import Home from '@/scenes/home'
 import Benefits from '@/scenes/benefits'
+import OurClasses from '@/scenes/ourClasses'
 import {SelectedPage} from "@/shared/types";
-import {HomeModernIcon, UserGroupIcon, AcademicCapIcon} from "@heroicons/react/24/solid";
+import ContactUs from "@/scenes/contactUs";
+import Footer from "@/scenes/footer";
+
 
 function App() {
     const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
@@ -28,6 +31,9 @@ function App() {
       />
         <Home setSelectedPage={setSelectedPage}/>
         <Benefits setSelectedPage={setSelectedPage}/>
+        <OurClasses setSelectedPage={setSelectedPage}/>
+        <ContactUs setSelectedPage={setSelectedPage}/>
+        <Footer/>
     </div>
   )
 }
